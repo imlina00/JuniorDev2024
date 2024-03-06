@@ -1,0 +1,72 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(29, 58, 141);
+  background-color: rgb(29, 58, 141);
+}
+
+.container {
+  width: 80%;
+  height: 80vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+img {
+  width: 180px;
+  height: 180px;
+}
+
+.klubovi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 24px;
+  color: rgb(29, 58, 141);
+  margin: 10px 0px;
+}
+
+.klubovi p {
+  font-size: 32px;
+}
+
+.tipkaOkvir {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.tipkaOkvir button {
+  font-size: 20px;
+  color: rgb(29, 58, 141);
+  padding: 5px 15px;
+}
+
+.prikazBroja {
+  padding: 10px;
+  font-size: 40px;
+}
+
+.prikazBroja p {
+  font-size: 2em;
+  margin: 0px 85px;
+}
+
+.akcije {
+  display: flex;
+  flex-direction: row;
+}
