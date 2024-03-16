@@ -1,0 +1,11 @@
+.container {
+    border-style: solid;
+    border-radius: 12px;
+    border-color: rgba(255, 149, 37, 0.87);
+    padding: 12px;
+}
+
+button {
+    color:rgba(255, 149, 37, 0.87);
+    margin: 12px auto;
+}
