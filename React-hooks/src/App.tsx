@@ -18,27 +18,29 @@ function App() {
     email: ''
   });
 
-  const [tema, postaviTemu] = useState("light")
+  const [tema, postaviTemu] = useState("light");
 
   function promjenaTeme(){
     postaviTemu(tema === "light" ? "dark" : "light")
   }
 
-  const handleUvjetiChange = () => {
+  function handleUvjetiChange() {
     setPrihvacamUvjete(!prihvacamUvjete);
-  };
+  }
 
-  const handlePodaciChange = (noviPodaci: any) => {
+  function handlePodaciChange(noviPodaci: any) {
     setPodaci({ ...podaci, ...noviPodaci });
-  };
+    setNarudzbaUspjesna(false);
+  }
 
-  const handleNacinChange = (nacinPlacanja: string) => {
+  function handleNacinChange(nacinPlacanja: string) {
     setPodaci({ ...podaci, nacinPlacanja });
-  };
+    setNarudzbaUspjesna(false);
+  }
 
-  const handlePodaciSubmit = () => {
+  function handlePodaciSubmit() {
     setNarudzbaUspjesna(true);
-  };
+  }
 
   return (
     <div>
@@ -68,7 +70,14 @@ function App() {
           prihvatioUvjete={prihvacamUvjete}
           onNaruci={handlePodaciSubmit}
         />
-        {narudzbaUspjesna && <Sazetak ime={podaci.ime} adresa={podaci.adresa} drzava={podaci.drzava} nacinPlacanja={podaci.nacinPlacanja} email={podaci.email} />}
+        <Sazetak
+          ime={podaci.ime}
+          adresa={podaci.adresa}
+          drzava={podaci.drzava}
+          nacinPlacanja={podaci.nacinPlacanja}
+          email={podaci.email}
+          narudzbaUspjesna={narudzbaUspjesna}
+        />
       </TemaContext.Provider>
     </div>
   );

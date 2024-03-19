@@ -1,7 +1,4 @@
-import TemaContext from "./Kontekst";
-import "./Containers.css"
-
-import React from 'react';
+import './Containers.css';
 
 interface SazetakProps {
   ime: string;
@@ -9,9 +6,14 @@ interface SazetakProps {
   adresa: string;
   drzava: string;
   nacinPlacanja: string;
+  narudzbaUspjesna: boolean;
 }
 
-const Sazetak: React.FC<SazetakProps> = ({ ime, email, adresa, drzava, nacinPlacanja }) => {
+function Sazetak({ ime, email, adresa, drzava, nacinPlacanja, narudzbaUspjesna }: SazetakProps) {
+  if (!narudzbaUspjesna) {
+    return null;
+  }
+
   return (
     <div className='sazetak'>
       <h2>Sažetak narudžbe:</h2>
@@ -22,6 +24,6 @@ const Sazetak: React.FC<SazetakProps> = ({ ime, email, adresa, drzava, nacinPlac
       <p>Način plaćanja: {nacinPlacanja}</p>
     </div>
   );
-};
+}
 
 export default Sazetak;

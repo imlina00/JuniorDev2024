@@ -12,18 +12,18 @@ const TemaContext = createContext<ThemeContextValue>({
   promjenaTeme: () => {}
 });
 
-export const TemaProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export function TemaProvider({ children }: { children: ReactNode }) {
   const [tema, postaviTemu] = useState(defaultTheme);
 
-  const promjenaTeme = () => {
+  function promjenaTeme() {
     postaviTemu(prevTema => prevTema === "light" ? "dark" : "light");
-  };
+  }
 
   return (
     <TemaContext.Provider value={{ tema, promjenaTeme }}>
       {children}
     </TemaContext.Provider>
   );
-};
+}
 
 export default TemaContext;

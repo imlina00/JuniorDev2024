@@ -5,14 +5,14 @@ interface NacinProps {
   onNacinChange: (nacinPlacanja: string) => void;
 }
 
-const Nacin: React.FC<NacinProps> = ({ onNacinChange }) => {
+function Nacin({ onNacinChange }: NacinProps) {
   const [nacinPlacanja, setNacinPlacanja] = useState('');
 
-  const handleNacinChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  function handleNacinChange(event: React.ChangeEvent<HTMLInputElement>) {
     const noviNacinPlacanja = event.target.value;
     setNacinPlacanja(noviNacinPlacanja);
     onNacinChange(noviNacinPlacanja);
-  };
+  }
 
   return (
     <div>
@@ -43,6 +43,6 @@ const Nacin: React.FC<NacinProps> = ({ onNacinChange }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Nacin;

@@ -5,25 +5,28 @@ interface AdresaProps {
   onPodaciChange: (noviPodaci: any) => void;
 }
 
-const Adresa: React.FC<AdresaProps> = ({ onPodaciChange }) => {
+function Adresa({ onPodaciChange }: AdresaProps) {
   const [ime, setIme] = useState('');
   const [adresa, setAdresa] = useState('');
   const [drzava, setDrzava] = useState('');
 
-  const handleImeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIme(event.target.value);
-    onPodaciChange({ ime: event.target.value, adresa, drzava });
-  };
+  function handleImeChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const novoIme = event.target.value;
+    setIme(novoIme);
+    onPodaciChange({ ime: novoIme, adresa, drzava });
+  }
 
-  const handleAdresaChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAdresa(event.target.value);
-    onPodaciChange({ ime, adresa: event.target.value, drzava });
-  };
+  function handleAdresaChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const novaAdresa = event.target.value;
+    setAdresa(novaAdresa);
+    onPodaciChange({ ime, adresa: novaAdresa, drzava });
+  }
 
-  const handleDrzavaChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setDrzava(event.target.value);
-    onPodaciChange({ ime, adresa, drzava: event.target.value });
-  };
+  function handleDrzavaChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    const novaDrzava = event.target.value;
+    setDrzava(novaDrzava);
+    onPodaciChange({ ime, adresa, drzava: novaDrzava });
+  }
 
   return (
     <div>
@@ -73,6 +76,6 @@ const Adresa: React.FC<AdresaProps> = ({ onPodaciChange }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Adresa;

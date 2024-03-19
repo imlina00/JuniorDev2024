@@ -5,16 +5,16 @@ interface KontaktProps {
   onKontaktChange: (email: string) => void;
 }
 
-const Kontakt: React.FC<KontaktProps> = ({ onKontaktChange }) => {
+function Kontakt({ onKontaktChange }: KontaktProps) {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
 
-  const validateEmail = (input: string) => {
+  function validateEmail(input: string) {
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
     return isValid;
-  };
+  }
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const inputValue = event.target.value;
     setEmail(inputValue);
 
@@ -24,7 +24,7 @@ const Kontakt: React.FC<KontaktProps> = ({ onKontaktChange }) => {
       setError('');
       onKontaktChange(inputValue);
     }
-  };
+  }
 
   return (
     <div>
@@ -40,6 +40,6 @@ const Kontakt: React.FC<KontaktProps> = ({ onKontaktChange }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Kontakt;
