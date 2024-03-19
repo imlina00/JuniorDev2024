@@ -1,42 +1,48 @@
 import React, { useState } from 'react';
-import "./Containers.css"
+import './Containers.css';
 
-const Nacin = () => {
-    const [nacinPlacanja, setNacinPlacanja] = useState('');
+interface NacinProps {
+  onNacinChange: (nacinPlacanja: string) => void;
+}
 
-    const handleNacinChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setNacinPlacanja(event.target.value);
-    };
+const Nacin: React.FC<NacinProps> = ({ onNacinChange }) => {
+  const [nacinPlacanja, setNacinPlacanja] = useState('');
 
-    return (
-        <div>
-            <h2>Način plaćanja:</h2>
-            <div className='container'>
-                <div>
-                    <label>
-                        <input
-                            type="radio"
-                            value="kartica"
-                            checked={nacinPlacanja === 'kartica'}
-                            onChange={handleNacinChange}
-                        />
-                        Plaćanje karticom
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input
-                            type="radio"
-                            value="pouzecem"
-                            checked={nacinPlacanja === 'pouzecem'}
-                            onChange={handleNacinChange}
-                        />
-                        Plaćanje pouzećem
-                    </label>
-                </div>
-            </div>
+  const handleNacinChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const noviNacinPlacanja = event.target.value;
+    setNacinPlacanja(noviNacinPlacanja);
+    onNacinChange(noviNacinPlacanja);
+  };
+
+  return (
+    <div>
+      <h2>Način plaćanja:</h2>
+      <div className='container'>
+        <div className='thing'>
+          <label>
+            <input
+              type="radio"
+              value="karticom"
+              checked={nacinPlacanja === 'karticom'}
+              onChange={handleNacinChange}
+            />
+            Plaćanje karticom
+          </label>
         </div>
-    );
+        <div className='thing'>
+          <label>
+            <input
+              type="radio"
+              value="pouzećem"
+              checked={nacinPlacanja === 'pouzećem'}
+              onChange={handleNacinChange}
+            />
+            Plaćanje pouzećem
+          </label>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Nacin;

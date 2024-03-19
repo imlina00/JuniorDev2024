@@ -1,11 +1,24 @@
 .container {
     border-style: solid;
     border-radius: 12px;
-    border-color: rgba(255, 149, 37, 0.87);
+    border-color: #5e85a3;
     padding: 12px;
 }
 
 button {
-    color:rgba(255, 149, 37, 0.87);
+    color: #3b607c;
     margin: 12px auto;
+}
+
+.thing {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.label {
+    padding-top: 1px;
+}
+
+.sazetak {
+    padding-bottom: 4px;
 }
