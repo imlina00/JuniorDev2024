@@ -1,0 +1,127 @@
+{
+  "Clothes": [
+      {
+          "id": 1,
+          "vrsta": "suknja",
+          "veličina": "XS",
+          "boja": "crvena",
+          "slika": "images/suknja_crvena.jpg"
+      },
+      {
+          "id": 2,
+          "vrsta": "suknja",
+          "veličina": "S",
+          "boja": "plava",
+          "slika": "images/suknja_plava.jpg"
+      },
+      {
+          "id": 3,
+          "vrsta": "suknja",
+          "veličina": "M",
+          "boja": "zelena",
+          "slika": "images/suknja_zelena.jpg"
+      },
+      {
+          "id": 4,
+          "vrsta": "suknja",
+          "veličina": "L",
+          "boja": "žuta",
+          "slika": "images/suknja_zuta.jpg"
+      },
+      {
+          "id": 5,
+          "vrsta": "suknja",
+          "veličina": "XL",
+          "boja": "narančasta",
+          "slika": "images/suknja_narancasta.jpg"
+      },
+      {
+          "id": 6,
+          "vrsta": "hlace",
+          "veličina": "XS",
+          "boja": "crna",
+          "slika": "images/hlace_crna.jpg"
+      },
+      {
+          "id": 7,
+          "vrsta": "hlace",
+          "veličina": "S",
+          "boja": "bordo",
+          "slika": "images/hlace_bordo.jpg"
+      },
+      {
+          "id": 8,
+          "vrsta": "hlace",
+          "veličina": "M",
+          "boja": "siva",
+          "slika": "images/hlace_siva.jpg"
+      },
+      {
+          "id": 9,
+          "vrsta": "hlace",
+          "veličina": "L",
+          "boja": "bijela",
+          "slika": "images/hlace_bijela.jpg"
+      },
+      {
+          "id": 10,
+          "vrsta": "hlace",
+          "veličina": "XL",
+          "boja": "tamnoplava",
+          "slika": "images/hlace_tamnoplava.jpg"
+      },
+      {
+          "id": 11,
+          "vrsta": "majica",
+          "veličina": "XS",
+          "boja": "roza",
+          "slika": "images/majica_roza.jpg"
+      },
+      {
+          "id": 12,
+          "vrsta": "majica",
+          "veličina": "S",
+          "boja": "crna",
+          "slika": "images/majica_crna.jpg"
+      },
+      {
+          "id": 13,
+          "vrsta": "majica",
+          "veličina": "M",
+          "boja": "plava",
+          "slika": "images/majica_plava.jpg"
+      },
+      {
+          "id": 14,
+          "vrsta": "majica",
+          "veličina": "L",
+          "boja": "bijela",
+          "slika": "images/majica_bijela.jpg"
+      },
+      {
+          "id": 15,
+          "vrsta": "majica",
+          "veličina": "XL",
+          "boja": "zeleno",
+          "slika": "images/majica_zeleno.jpg"
+      },
+      {
+          "id": 16,
+          "vrsta": "torba",
+          "boja": "crna",
+          "slika": "images/torba_crna.jpg"
+      },
+      {
+          "id": 17,
+          "vrsta": "torba",
+          "boja": "plava",
+          "slika": "images/torba_plava.jpg"
+      },
+      {
+          "id": 18,
+          "vrsta": "torba",
+          "boja": "crvena",
+          "slika": "images/torba_crvena.jpg"
+      }
+  ]
+}
