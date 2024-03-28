@@ -1,7 +1,11 @@
 import RedakTablice from "./RedakTablice";
 import { Clothes } from '../interfaces';
 
-function Tablica({ clothes }: { clothes: Clothes[] }) {
+interface Props {
+    clothes: Clothes[];
+}
+
+function Tablica({ clothes }: Props) {
     return (
         <table>
             <thead>
@@ -10,11 +14,12 @@ function Tablica({ clothes }: { clothes: Clothes[] }) {
                     <th>Vrsta</th>
                     <th>Veličina</th>
                     <th>Boja</th>
+                    <th>Slika</th>
                 </tr>
             </thead>
             <tbody>
-                {clothes.map(r => (
-                    <RedakTablice key={r.id} clo={r} />
+                {clothes.map(clo => (
+                    <RedakTablice key={clo.id} clo={clo} />
                 ))}
             </tbody>
         </table>

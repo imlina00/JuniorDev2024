@@ -1,14 +1,17 @@
 import { Clothes } from "../interfaces";
 
-function RedakTablice({ clo }: {clo: Clothes}) {
+interface Props {
+    clo: Clothes;
+}
+
+function RedakTablice({ clo }: Props) {
     return (
         <tr>
             <td>{clo.id}</td>
-            <td>{clo.vrsta}</td>
-            <td>{clo.veličina}</td>
-            <td>{clo.boja}</td>
-            {/* Ovdje ćemo koristiti slika izravno kao atribut src */}
-            <td><img src={clo.slika} alt={`${clo.vrsta} ${clo.boja}`} /></td>
+            <td>{clo.outfit.vrsta}</td>
+            <td>{clo.outfit.veličina || "-"}</td>
+            <td>{clo.outfit.boja}</td>
+            <td><img className="slika" src={clo.outfit.slika} alt={`${clo.outfit.vrsta} ${clo.outfit.boja}`} /></td>
         </tr>
     );
 }

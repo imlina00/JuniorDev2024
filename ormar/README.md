@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
+# Moj ormar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Problemi
+Za sada preskočen odabir iz liste (pokušati za veličine pošto se nisu dohvaćale).
+Brisanje ne radi (id, link).
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Nadodati
+Dodati colorpicker element za odabir boje.
+Prije brisanja bi bilo poželjno upitati korisnika je li siguran u svoj odabir.
+Poraditi na CSS-u.
+Promjena podataka (DD naslov).
+Filtriranje prikaza (radio element - dodajte mogućnost filtriranja prikaza prema nekoj karakteristici, npr. prikaz samo elemenata po nekoj veličini  ili vrsti odjeće. S obzirom da poslužitelj vraća sve podatke, filtriranje radite unutar komponente - možete imati jedno stanje sa svim podacima, a drugo sa podacima za prikaz koje se mijenja ovisno o odabranoj opciji).

@@ -1,12 +1,15 @@
 export interface Root {
-    Clothes: Clothes[]
-  }
-  
-  export interface Clothes {
-    id: number
-    vrsta: string
-    veličina?: string
-    boja: string
-    slika: string
-  }
-  
+  clothes: Clothes[]
+}
+
+export interface Clothes {
+  id: any
+  outfit: Outfit
+}
+
+export interface Outfit {
+  vrsta: string
+  veličina: string
+  boja: string
+  slika: string
+}
