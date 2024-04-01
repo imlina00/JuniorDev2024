@@ -1,147 +1,75 @@
 {
   "clothes": [
     {
-      "id": 1,
+      "id": "1",
       "outfit": {
         "vrsta": "suknja",
         "veličina": "XS",
-        "boja": "crvena",
+        "boja": "#6c3b8c",
         "slika": "https://printshop.mitalex.ba/wp-content/uploads/2021/12/2-1-2-600x689.jpg"
       }
     },
     {
-      "id": 2,
-      "outfit": {
-        "vrsta": "suknja",
-        "veličina": "S",
-        "boja": "plava",
-        "slika": "https://printshop.mitalex.ba/wp-content/uploads/2021/12/2-1-2-600x689.jpg"
-      }
-    },
-    {
-      "id": 3,
+      "id": "3",
       "outfit": {
         "vrsta": "suknja",
         "veličina": "M",
-        "boja": "zelena",
+        "boja": "#8c3b3b",
         "slika": "https://printshop.mitalex.ba/wp-content/uploads/2021/12/2-1-2-600x689.jpg"
       }
     },
     {
-      "id": 4,
-      "outfit": {
-        "vrsta": "suknja",
-        "veličina": "L",
-        "boja": "žuta",
-        "slika": "https://printshop.mitalex.ba/wp-content/uploads/2021/12/2-1-2-600x689.jpg"
-      }
-    },
-    {
-      "id": 5,
+      "id": "5",
       "outfit": {
         "vrsta": "suknja",
         "veličina": "XL",
-        "boja": "narančasta",
+        "boja": "#6c3b8c",
         "slika": "https://printshop.mitalex.ba/wp-content/uploads/2021/12/2-1-2-600x689.jpg"
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "outfit": {
         "vrsta": "hlace",
         "veličina": "XS",
-        "boja": "crna",
+        "boja": "#6c3b8c",
         "slika": "images/hlace_crna.jpg"
       }
     },
     {
-      "id": 7,
-      "outfit": {
-        "vrsta": "hlace",
-        "veličina": "S",
-        "boja": "bordo",
-        "slika": "images/hlace_bordo.jpg"
-      }
-    },
-    {
-      "id": 8,
-      "outfit": {
-        "vrsta": "hlace",
-        "veličina": "M",
-        "boja": "siva",
-        "slika": "images/hlace_siva.jpg"
-      }
-    },
-    {
-      "id": 9,
+      "id": "9",
       "outfit": {
         "vrsta": "hlace",
         "veličina": "L",
-        "boja": "bijela",
+        "boja": "#8c3b3b",
         "slika": "images/hlace_bijela.jpg"
       }
     },
     {
-      "id": 10,
-      "outfit": {
-        "vrsta": "hlace",
-        "veličina": "XL",
-        "boja": "tamnoplava",
-        "slika": "images/hlace_tamnoplava.jpg"
-      }
-    },
-    {
-      "id": 11,
-      "outfit": {
-        "vrsta": "majica",
-        "veličina": "XS",
-        "boja": "roza",
-        "slika": "images/majica_roza.jpg"
-      }
-    },
-    {
-      "id": 12,
-      "outfit": {
-        "vrsta": "majica",
-        "veličina": "S",
-        "boja": "crna",
-        "slika": "images/majica_crna.jpg"
-      }
-    },
-    {
-      "id": 13,
-      "outfit": {
-        "vrsta": "majica",
-        "veličina": "M",
-        "boja": "plava",
-        "slika": "images/majica_plava.jpg"
-      }
-    },
-    {
-      "id": 14,
-      "outfit": {
-        "vrsta": "majica",
-        "veličina": "L",
-        "boja": "bijela",
-        "slika": "images/majica_bijela.jpg"
-      }
-    },
-    {
-      "id": 15,
+      "id": "10",
       "outfit": {
         "vrsta": "majica",
         "veličina": "XL",
-        "boja": "zeleno",
-        "slika": "images/majica_zeleno.jpg"
+        "boja": "#8c3b3b",
+        "slika": "images/majica_tamnoplava.jpg"
       }
     },
     {
-      "id": "16c0",
+      "id": 587,
+      "outfit": {
+        "vrsta": "cipele",
+        "veličina": "39",
+        "boja": "#8c3b3b",
+        "slika": "https://a.cdnmp.net/335432115/p/l/3/kezualne-cipele-ferchar-crne~8928233.jpg"
+      }
+    },
+    {
+      "id": 427,
       "outfit": {
         "vrsta": "haljina",
-        "veličina": "L",
-        "boja": "crna",
-        "slika": "https://www.fashiontrampa.ba/wp-content/uploads/2022/01/EF8632B0-5AA7-4C26-B46E-C96C1A6830D7.jpeg"
+        "veličina": "XS",
+        "boja": "#8c3b3b",
+        "slika": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/230px-Blue_Tshirt.jpg"
       }
     }
   ]

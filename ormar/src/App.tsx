@@ -23,12 +23,11 @@ function App() {
     <div className='App'>
       <div className="unos-i-tablica-container">
         <div className="unos-forma-container">
-          <h2>Unos ormara</h2>
+          <h1>Unos ormara</h1>
           <UnosForma dodaj={postaviPodatke} />
-          <Brisanje promjena={postaviPodatke}/>
         </div>
         <div className="tablica-container">
-          <h2>Popis ormara</h2>
+          <h1>Popis ormara</h1>
           <Tablica clothes={clothes} />
         </div>
       </div>

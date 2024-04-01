@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Clothes } from "../interfaces";
 
 interface FormaPodaci {
-    id: number;
     vrsta: string;
     veličina: string;
     boja: string;
@@ -15,12 +14,10 @@ interface UnosFormaProps {
 }
 
 function UnosForma(props: UnosFormaProps) {
-    const [veličina, postaviVelicinu] = useState<string[]>([]);
     const [formaPodaci, postaviPodatke] = useState<FormaPodaci>({
-        id: 0,
         vrsta: "",
-        veličina: "",
-        boja: "",
+        veličina: "", // Ovdje ćemo odabrati veličinu
+        boja: "#000000", // Početna vrijednost boje
         slika: "",
     });
 
@@ -46,27 +43,12 @@ function UnosForma(props: UnosFormaProps) {
         postaviPodatke({ ...formaPodaci, [name]: value });
     }
 
-    useEffect(() => {
-        axios
-            .get<FormaPodaci[]>("http://localhost:3001/clothes")
-            .then(res => {
-                console.log(res.data);
-
-                const sizes: string[] = [];
-                res.data.forEach(item => {
-                    if (item.veličina && !sizes.includes(item.veličina)) {
-                        sizes.push(item.veličina);
-                    }
-                });
-                postaviVelicinu(sizes);
-            })
-            .catch(err => console.log(err.message));
-    }, []);
-
     const obradiPodatke = (formaPodaci: FormaPodaci): Clothes => {
+        // Generiramo random ID (ovdje možete koristiti neki bolji algoritam za generiranje ID-a)
+        const randomId = Math.floor(Math.random() * 1000) + 1;
 
         return {
-            id: formaPodaci.id,
+            id: randomId,
             outfit: {
                 vrsta: formaPodaci.vrsta,
                 veličina: formaPodaci.veličina,
@@ -91,7 +73,7 @@ function UnosForma(props: UnosFormaProps) {
                 </label>
             </div>
 
-            {/* <div>
+            <div>
                 <label>
                     Veličina:
                     <select
@@ -101,35 +83,38 @@ function UnosForma(props: UnosFormaProps) {
                         required
                     >
                         <option value=''>--Odaberi veličinu--</option>
-                        {veličina.map((size, index) => (
-                            <option key={formaPodaci.id + index} value={size}>
-                                {size}
-                            </option>
-                        ))}
+                        <option value='XS'>XS</option>
+                        <option value='S'>S</option>
+                        <option value='M'>M</option>
+                        <option value='L'>L</option>
+                        <option value='XL'>XL</option>
                     </select>
-                </label>
-            </div> */}
-
-            <div>
-                <label>
-                    Veličina:
-                    <input type='text' name='veličina' value={formaPodaci.veličina}
-                        onChange={promjenaUlaza} required />
                 </label>
             </div>
 
             <div>
                 <label>
                     Boja:
-                    <input type='text' name='boja' value={formaPodaci.boja}
-                        onChange={promjenaUlaza} required />
+                    <input
+                        type='color'
+                        name='boja'
+                        value={formaPodaci.boja}
+                        onChange={promjenaUlaza}
+                        required
+                    />
                 </label>
             </div>
+
             <div>
                 <label>
                     Slika:
-                    <input type='text' name='slika' value={formaPodaci.slika}
-                        onChange={promjenaUlaza} required />
+                    <input
+                        type='text'
+                        name='slika'
+                        value={formaPodaci.slika}
+                        onChange={promjenaUlaza}
+                        required
+                    />
                 </label>
             </div>
 

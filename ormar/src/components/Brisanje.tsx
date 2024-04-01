@@ -1,38 +1,17 @@
-import axios from "axios";
-import { useState } from "react";
 
 interface Props {
-    promjena: (data: any) => void;
+    onConfirm: () => void;
+    onCancel: () => void;
 }
 
-function Brisanje(props: Props) {
-    const [idPodatka, postaviId] = useState(0);
-
-    function brisiPodatak(id: number) {
-        axios.delete(`http://localhost:3001/clothes/${id}`).then(rez => {
-            axios
-                .get("http://localhost:3001/clothes")
-                .then(rez => props.promjena(rez.data));
-        });
-    }
-
+const Brisanje: React.FC<Props> = ({ onConfirm, onCancel }) => {
     return (
-        <div>
-            <h2>Brisanje podataka</h2>
-            <div>
-                <label>
-                    Unesite ID podatka:
-                    <input
-                        type='number'
-                        name='id'
-                        value={idPodatka}
-                        onChange={e => postaviId(parseInt(e.target.value))}
-                    />
-                </label>
-            </div>
-            <button onClick={() => brisiPodatak(idPodatka)}>Obriši komad</button>
+        <div className="confirmation">
+            <p>Jeste li sigurni da želite izbrisati proizvod?</p>
+            <button onClick={onConfirm}>Da</button>
+            <button onClick={onCancel}>Ne</button>
         </div>
     );
-}
+};
 
 export default Brisanje;
