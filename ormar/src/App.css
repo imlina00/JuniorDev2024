@@ -1,0 +1,97 @@
+body {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('https://png.pngtree.com/background/20230610/original/pngtree-walk-in-closet-with-several-shelves-and-drawers-picture-image_3105316.jpg');
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 100px;
+}
+
+h1 {
+  color: #523514;
+  font-family: 'Playfair Display', serif;
+  padding: 10px;
+}
+
+.FormContainer {
+  width: 45%;
+  background-color: #c4a484cb;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.TableContainer {
+  width: 100%;
+  padding: 20px;
+}
+
+form {
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="color"],
+input[type="date"],
+select,
+button {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  width: calc(100% - 22px);
+}
+
+button {
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #523514;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  background-color: #c4a484cb;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #523514;
+  font-weight: bold;
+  text-align: left;
+}
+
+td div {
+  width: 20px;
+  height: 20px;
+}
+
+.FormContainer form > div + div {
+  margin-top: 8px;
+}
+
+.FormContainer form > div:last-child {
+  margin-top: 8px;
+}
+
+.FormContainer form input[type="color"] {
+  width: 30px;
+}

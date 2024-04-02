@@ -1,0 +1,28 @@
+{
+  "komadi": [
+    {
+      "id": "1",
+      "naziv": "Hlače",
+      "vrsta": "Traperice",
+      "velicina": "S",
+      "boja": "#C04000",
+      "slika": "https://img01.ztat.net/article/spp-media-p1/6a8099a3b2034932a69d15e346acc011/d59d5bfc2e95415cb4f871439f2fdeda.jpg?imwidth=762&filter=packshot"
+    },
+    {
+      "id": "2",
+      "naziv": "Majica",
+      "vrsta": "Gornji dio",
+      "velicina": "M",
+      "boja": "#000000",
+      "slika": "https://www.hudsonwellesley.com/cdn/shop/products/Black_Tee_Front_1024x1024@2x.png?v=1582411399"
+    },
+    {
+      "id": "3",
+      "slika": "https://www.3wisemen.co.nz/media/catalog/product/t/2/t20_236999_1.jpg?optimize=low&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700",
+      "naziv": "Košulja",
+      "vrsta": "Gornji dio",
+      "velicina": "L",
+      "boja": "#ADD8E6"
+    }
+  ]
+}
